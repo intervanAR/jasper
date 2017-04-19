@@ -1,0 +1,10 @@
+{
+    "name": "siu/jasper",
+    "description": "Librerías básicas para impresión via Jasper",
+    "authors": [
+        {
+            "name": "SIU",
+            "email": "toba@siu.edu.ar"
+        }
+    ]
+}
