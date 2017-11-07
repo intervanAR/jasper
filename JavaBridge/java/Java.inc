@@ -329,7 +329,7 @@ public $simpleFactory,
 $proxyFactory, $iteratorProxyFacroty,
 $arrayProxyFactory, $exceptionProxyFactory, $throwExceptionProxyFactory;
 public $arg;
-public $asyncCtx, $cancelProxyCreationCounter;
+public $asyncCtx, $cancelProxyCreationCounter, $cancelProxyCreationTag;
 public $globalRef;
 public $stack;
 public $defaultCache = array(), $asyncCache = array(), $methodCache;
@@ -355,7 +355,7 @@ $this->throwExceptionProxyFactory = new java_ThrowExceptionProxyFactory($this);
 $this->cachedJavaPrototype=new java_JavaProxyProxy($this);
 $this->simpleArg = new java_Arg($this);
 $this->globalRef = new java_GlobalRef();
-$this->asyncCtx = $this->cancelProxyCreationCounter = 0;
+$this->asyncCtx = $this->cancelProxyCreationCounter = $this->cancelProxyCreationTag = 0;
 $this->methodCache = $this->defaultCache;
 }
 function read($size) {
